@@ -1,0 +1,232 @@
+.container {
+  max-width: 900px; /* İçeriğin maksimum genişliğini ayarlayın */
+  margin: 0 auto; /* İçeriği yatay olarak sayfa ortasına alın */
+  padding: 0 20px;
+}
+
+/* Header içeriğini yatay olarak sıralamak için flexbox kullanalım */
+header {
+  display: flex;
+  justify-content: space-between; /* İki ana içerik arasında maksimum boşluk bırakır */
+  align-items: center; /* İçerikleri dikey olarak ortalar */
+  padding: 5px 10px; /* Header'a biraz dolgu ekleyin */
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* İçerikleri dikey olarak ortalar */
+}
+#logo-image {
+  width: 40px; /* Logo genişliğini ayarlayabilirsiniz */
+  height: auto;
+  margin-right: 8px; /* Logo ile metin arasında boşluk ekler */
+}
+.header-text h1 {
+  font-size: 30px; /* Başlık boyutunu ayarlayabilirsiniz */
+  font-family: "Lobster", cursive;
+
+  margin: 0; /* Varsayılan üst ve alt boşluğu kaldırır */
+  color: #333; /* Renk kodunu istediğiniz bir değere ayarlayabilirsiniz */
+}
+.header-text p {
+  font-size: 8px; /* Alt metin boyutunu ayarlayabilirsini*/
+  margin: 0; /* Varsayılan üst ve alt boşluğu kaldırır */
+  color: #777; /* Renk kodunu istediğiniz bir değere ayarlayabilirsiniz */
+}
+.social-icons-wrapper {
+  display: flex;
+  justify-content: flex-end; /* İkonları sağ tarafa hizalar */
+}
+
+#social-icons {
+  display: flex;
+  gap: 0.5px; /* İkonlar arasında boşluk */
+}
+
+#social-icons a {
+  display: inline-block;
+  width: 24px; /* İkonların genişliğini ayarlayın */
+  height: 24px; /* İkonların yüksekliğini ayarlayın */
+}
+
+#social-icons img {
+  max-width: 100%;
+  height: auto;
+}
+
+#social-icons a:nth-last-child(2) {
+  margin-left: 8px; /* Son iki ikon ile diğer ikonlar arasında 8px boşluk ekler */
+  margin-right: 0.5px; /* RSS ve Email ikonları arasında 0.5px boşluk ekler */
+}
+
+#social-icons a:nth-last-child(1) {
+  margin-left: 0.5px; /* RSS ve Email ikonları arasında 1px boşluk ekler */
+}
+.header-wrapper {
+  position: relative;
+}
+
+.pattern {
+  height: 10px;
+  background-image: radial-gradient(circle, #000 10%, transparent 10%),
+    radial-gradient(circle, #000 10%, transparent 10%);
+  background-size: 5px 5px;
+  background-position: 0 0, 2.5px 2.5px;
+}
+.metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+h1 {
+  margin-bottom: 5px; /* h1 başlığının altındaki boşluğu azalt */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.metadata .print {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+span {
+  color: #777777;
+}
+.article-image {
+  width: 100%;
+}
+
+.article-image img {
+  width: 100%;
+
+  margin: 20px 0;
+  display: block; /* Görselin altında oluşabilecek ekstra boşluğu kaldırır */
+}
+article p {
+  line-height: 1.6;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+  text-indent: 20px;
+}
+
+/* Malzemeler listesi stillemeleri */
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  background-image: url("assets/list-bg.png"); /* Görselin yoluna göre değiştirin */
+  background-repeat: no-repeat;
+  background-size: cover; /* Görselin boyutunu liste boyutuna göre ayarlar */
+  padding: 20px; /* İçerik ile arka plan görseli arasında bir boşluk oluşturur */
+  width: 400px; /* Genişliği ayarlayın */
+  height: 150px; /* Yüksekliği ayarlayın */
+}
+
+/*aside ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+aside ul li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li.checked-item {
+  text-decoration: line-through; /* Üzeri çizili metin */
+
+/*li.checked-item input[type="checkbox"] {
+  checked: true; /* Kutucuğun işaretlenmiş olarak gelmesini sağlar */
+aside {
+  width: 100%;
+}
+
+.ingredients-wrapper {
+  display: flex; /* Flexbox kullanarak içerikleri yan yana getirir */
+  justify-content: space-between; /* İki sıra arasında boşluk bırakır */
+  font-family: "Lato", sans-serif;
+  color: #777;
+}
+
+.ingredients-left,
+.ingredients-right {
+  width: 48%; /* İki sıranın genişliğini ayarlar */
+  font-size: 16px; /* Yazı boyutunu ayarla */
+  margin-bottom: 10px; /* Her bir madde arasında boşluk bırak */
+}
+.ingredients-left li input[type="checkbox"],
+.ingredients-right li input[type="checkbox"] {
+  margin-right: 10px; /* Kutucuk ile yazı arasında boşluk bırak */
+}
+.checked-item {
+  text-decoration: line-through; /* Üzeri çizili metin */
+}
+.add-ingredient {
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.van-image {
+  width: 100px; /* İstenilen boyuta göre ayarlanabilir */
+  margin-right: 20px;
+}
+
+.footer-text h3 {
+  margin: 0;
+  font-size: 20px; /* İstenilen boyuta göre ayarlanabilir */
+}
+
+.footer-text p {
+  margin: 10px 0 0;
+  font-size: 14px; /* İstenilen boyuta göre ayarlanabilir */
+}
+
+.share-button {
+  padding: 10px 20px;
+  width: 20%;
+  height: 20%;
+  background-color: brown; /* İstenilen renge göre ayarlanabilir */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #8f8f8f;
+  margin: 0 20px;
+}
+
+.footer-logo {
+  z-index: 1;
+}
+
+.footer-bottom-text {
+  text-align: center;
+  padding-top: 20px;
+}
